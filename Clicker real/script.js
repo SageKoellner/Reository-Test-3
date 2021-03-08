@@ -1,10 +1,8 @@
 //timer
-var sec = 100;
+var sec = 15;
 function startTimerFunction() {
     if (document.getElementById("playerClicks").innerHTML == 0 || document.getElementById("playerClicks").innerHTML == "(Player Score)") {
-        var timer = setInterval(myClock, 1);
-        //seconds
-        sec = 100;
+        var timer = setInterval(myClock, 1000);
         //countdown
         function myClock() {
             //counts down
