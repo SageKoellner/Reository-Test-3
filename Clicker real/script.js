@@ -3,6 +3,8 @@ var sec = 15;
 function startTimerFunction() {
     if (document.getElementById("playerClicks").innerHTML == 0 || document.getElementById("playerClicks").innerHTML == "(Player Score)") {
         var timer = setInterval(myClock, 1000);
+        //reset value VERRYY ImpoRTANT
+        var sec = 15;
         //countdown
         function myClock() {
             //counts down
@@ -55,6 +57,6 @@ function resetFunction(){
 
 //sound effects
 function playSound(){
-    var sound = document.audio("shot");
+    var sound = document.audio("shot")
     sound.play();
 }
