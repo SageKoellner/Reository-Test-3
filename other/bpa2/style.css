@@ -1,0 +1,27 @@
+.img{
+    width: 50px;
+    height: px;
+    display: block;
+}
+body{
+    font: 20px "Times New Roman", Times, serif;
+    color: #00051A;
+    background-color:  #9DEFFF;
+}
+.heading{
+    font: bold 32px "Times New Roman", Times, serif;
+    color: #AE28F2;
+}
+.title{
+    font: bold 18px "Times New Roman", Times, serif;
+    color:#ED6DDF;
+}
+.square{
+    list-style: square;
+}
+
+.img{
+    width:50px;
+    height: 5px;
+}   
+
