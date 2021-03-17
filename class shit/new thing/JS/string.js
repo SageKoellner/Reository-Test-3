@@ -1,26 +1,32 @@
 //#region variables
 var text;
 var userChoice;
+var win;
 var error = 'wrong answer mx. employee, restarteru!';
+
 
 //#endregion
 
 //#region start
 function start(){
-    text = 'Pick your profession <br>(1)manual labor <br>(2)office worker';
+    text = 'Pick your profession \n(1)manual labor \r(2)office worker';
     var userChoice = prompt(text);
     switch(userChoice){
         case '1':
             employee();
             break;
         case '2':
+            employee();
             break;
         default:
+            if (userChoice === null) {
+                return;
+            }
             alert(error);
             start();
             break;
-
     }
+    
 }
 
 //#endregion
@@ -29,7 +35,7 @@ function start(){
 
 //0
 function employee(){
-    text = '';
+    text = 'your in the middle of working when your boss pulls you aside and gives you more work. \rTired of not only his shit, but all of Capitalism you: \r(1)Cuss out your boss \r(2)Walk out \r(3)Get back to work, putting aside your anger.';
     var userChoice = prompt(text);
     switch(userChoice){
         case '1':
@@ -42,9 +48,13 @@ function employee(){
             work()
             break;
         default:
+            if (userChoice === null) {
+                return;
+            }
             alert(error);
             start();
             break;
+    }
 }
 
 //#endregion
@@ -53,7 +63,7 @@ function employee(){
 
 //1
 function cuss(){
-    text = '';
+    text = 'you cuss out your boss, how loud do you speak? (1)quietly (2)loudly';
     var userChoice = prompt(text);
     switch(userChoice){
         case '1':
@@ -63,6 +73,9 @@ function cuss(){
             fired()
             break;
         default:
+            if (userChoice === null) {
+                return;
+            }
             alert(error);
             start();
             break;
@@ -73,12 +86,11 @@ function cuss(){
 function deaf(){
     text = 'he didnt hear you,,, you go back to work. you can escape anouther day';
     alert(text)
-    start();
 }
 
 //1.2
 function fired(){
-    text = 'Your boss fires you on hearing such vulgar language. He comands that you leae t once, threatening to vall security. <br>what do you do? <br>(1)stay outa spite <br>(2)walk out';
+    text = 'Your boss fires you, on hearing such vulgar language. He comands that you leae t once, threatening to vall security. <br>what do you do? <br>(1)stay outa spite <br>(2)walk out';
     var userChoice = prompt(text);
     switch(userChoice){
         case '1':
@@ -88,23 +100,45 @@ function fired(){
             walkOut()
             break;
         default:
+            if (userChoice === null) {
+                return;
+            }
+            alert(error);
+            start();
+            break;
+    }
+}
+
+
+
+//1.2.1
+function spite(){
+    text = 'you stayed out of spite for him,, he called security. \rWhat will you do? \r(1)fight security \r(2)cooperate?';
+    var userChoice = prompt(text);
+    switch(userChoice){
+        case '1':
+            fight();
+            break;
+        case '2':
+            cooperate()
+            break;
+        default:
+            if (userChoice === null) {
+                return;
+            }
             alert(error);
             start();
             break;
     }
 
 }
-/*
-//1.2.1
-function spite(){
-
-
-}
 
 //1.2.1.1
 function fight(){
-
-
+    text = 'You attempted to fight the security guard,,, sadly  today is not the day to awaken your inner fighting spirit. you lost,, horribly,,, youre now bleeding out on the floor.'
+    win = 'Good job you have found the Police Brutality ending, you escaped this capitalistic world, good luck on your journey after death. congrats!!!';
+    alert(text);
+    alert(win);
 }
 
 //1.2.1.2
@@ -122,6 +156,8 @@ function Brutality(){
 //#endregion
 
 //#region 2
+
+
 
 //2
 function walkOut(){
@@ -209,13 +245,9 @@ function bossPancake(){
 
 //#endregion
 
-//#region 3
-
 //3
 function work(){
-    alert('you go back to work, to escape anouther day')
+    alert('you go back to work, to escape anouther day');
     start();
 }
-*/
 
-//#endregion
