@@ -9,7 +9,7 @@ restraunts = [['House of China','Imperial Garden','Main Moon','China Star'],['Ha
 def main ():
     x = ''
     user_choice = input('Which would you like to eat\n(1)Chinese\n(2)Japanese\n(3)Indian\n(4)Pizza\n(5)I Don\'t Know\n')
-    if user_choice <= str(len(restraunts) - 1) and user_choice > '0':
+    if user_choice <= str(len(restraunts)) and user_choice > '0':
         x = random.choice(restraunts[int(user_choice) - 1])
     elif user_choice == str(len(restraunts) + 1):
         x = random.choice(restraunts[random.randrange(0, len(restraunts), 1)])
