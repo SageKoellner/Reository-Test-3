@@ -15,3 +15,9 @@ div, hr{
 #start{
   display: block;
 }
+
+img{
+  width: 1000px;
+  margin: auto;
+  
+}
