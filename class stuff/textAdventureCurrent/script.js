@@ -3,7 +3,6 @@ var event_Duck = ['start', 'class', 'wake', 'yesQuest', 'noQuest', 'wood', 'cave
 
 function submit(x, y) {
   name_Duck = document.getElementById('name').value; //gets user input for name_Duck value
-  console.log(name_Duck)
   riddleOneUser = document.getElementById('riddleOneUser').value; //gets user input for riddle One 
   riddleTwoUser = document.getElementById('riddleTwoUser').value; //gets user input for riddle Two 
   if (x == 0 && name_Duck !== '') { //if div id equals start and name_Duck input is filled out, continue 
